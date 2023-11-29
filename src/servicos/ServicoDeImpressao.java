@@ -3,16 +3,17 @@ package servicos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServicoDeImpressao {
+// Generics
+public class ServicoDeImpressao <Tipo> {
 
-    private List<Integer> lista = new ArrayList<>();
+    private List<Tipo> lista = new ArrayList<>();
 
     // Métodos
-    public void addValor(Integer valor) {
+    public void addValor(Tipo valor) {
         lista.add(valor);
     }
 
-    public Integer primeiro() {
+    public Tipo primeiro() {
         if (lista.isEmpty()) {
             throw new IllegalStateException("A lista está vazia!");
         }
